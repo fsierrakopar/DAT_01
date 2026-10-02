@@ -29,17 +29,17 @@ Terraform se practica con el **proveedor de Docker** (`kreuzwerker/docker`): mis
 ## Fases
 
 ### Fase 0 · Preparar el entorno (1 sesión)
-- [ ] 0.1 Verificar WSL2 y Ubuntu
-- [ ] 0.2 Limitar recursos con `.wslconfig`
-- [ ] 0.3 Integrar Docker Desktop con WSL
-- [ ] 0.4 Herramientas base de Ubuntu
-- [ ] 0.5 Git y llave SSH para GitHub
-- [ ] 0.6 Node.js LTS con nvm
-- [ ] 0.7 Terraform desde el repositorio de HashiCorp
-- [ ] 0.8 VSCodium conectado a WSL + extensiones
-- [ ] 0.9 Claude Code dentro de WSL
-- [ ] 0.10 Crear la estructura del proyecto
-- [ ] 0.11 Verificación final
+- [x] 0.1 Verificar WSL2 y Ubuntu
+- [x] 0.2 Limitar recursos con `.wslconfig`
+- [x] 0.3 Integrar Docker Desktop con WSL
+- [x] 0.4 Herramientas base de Ubuntu
+- [x] 0.5 Git y llave SSH para GitHub
+- [x] 0.6 Node.js LTS con nvm
+- [x] 0.7 Terraform desde el repositorio de HashiCorp
+- [x] 0.8 VSCodium conectado a WSL + extensiones
+- [x] 0.9 Claude Code dentro de WSL
+- [x] 0.10 Crear la estructura del proyecto
+- [x] 0.11 Verificación final
 
 ### Fase 1 · Un servicio en contenedor (semana 1)
 - [ ] Spec de `kpi-api`
@@ -89,3 +89,4 @@ Terraform se practica con el **proveedor de Docker** (`kreuzwerker/docker`): mis
 | Fecha | Fase | Avance / aprendizaje |
 | --- | --- | --- |
 | 2026-10-01 | 0 | Inicio del plan |
+| 2026-10-02 | 0 | Fase 0 completada. Aprendizaje: el código vive en el sistema de archivos de Linux (~/Codium), no en /mnt/c o /mnt/d, por velocidad, detección de cambios y permisos; los archivos copiados desde Windows llegan como ejecutables y se corrigen con chmod 644. |
