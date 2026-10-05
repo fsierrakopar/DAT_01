@@ -7,3 +7,4 @@ dist/
 *.tfstate.*
 *.tfvars
 !example.tfvars
+*:Zone.Identifier
