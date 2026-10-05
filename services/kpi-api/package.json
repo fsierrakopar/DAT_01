@@ -1,0 +1,26 @@
+{
+  "name": "kpi-api",
+  "version": "0.1.0",
+  "description": "API de KPIs de ventas del laboratorio DAT_01",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

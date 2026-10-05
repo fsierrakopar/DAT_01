@@ -42,7 +42,7 @@ Terraform se practica con el **proveedor de Docker** (`kreuzwerker/docker`): mis
 - [x] 0.11 Verificación final
 
 ### Fase 1 · Un servicio en contenedor (semana 1)
-- [ ] Spec de `kpi-api`
+- [x] Spec de `kpi-api`
 - [ ] `services/kpi-api`: Node + Express + TypeScript con `/health` y `/kpis/ventas`
 - [ ] Dockerfile multi-stage, imagen ligera, usuario sin privilegios
 - [ ] `docker build` y `docker run`
@@ -90,3 +90,4 @@ Terraform se practica con el **proveedor de Docker** (`kreuzwerker/docker`): mis
 | --- | --- | --- |
 | 2026-10-01 | 0 | Inicio del plan |
 | 2026-10-02 | 0 | Fase 0 completada. Aprendizaje: el código vive en el sistema de archivos de Linux (~/Codium), no en /mnt/c o /mnt/d, por velocidad, detección de cambios y permisos; los archivos copiados desde Windows llegan como ejecutables y se corrigen con chmod 644. |
+| 2026-10-05 | 1 | Spec 001 paso 1: esqueleto de kpi-api (Express 5 + TypeScript, ESM) con `/health` respondiendo en `npm run dev`. Aprendizaje: con ESM y `module: NodeNext`, los imports internos se escriben con extensión `.js` porque TypeScript no reescribe rutas; separar `app.ts` de `server.ts` permite probar la app sin abrir puerto. |
