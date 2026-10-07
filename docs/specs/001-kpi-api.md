@@ -180,6 +180,10 @@ Formato común de error:
 
 Los errores 500 registran el detalle en el log y entregan al cliente un mensaje general.
 
+### 6.7 Cabeceras de respuesta
+
+Las respuestas, incluidas las de error, omiten la cabecera `X-Powered-By`. Express la agrega por defecto (`X-Powered-By: Express`); quitarla evita revelar la tecnología del servidor sin afectar al cliente.
+
 ## 7. Configuración
 
 | Variable | Valor por defecto | Uso |
@@ -222,6 +226,7 @@ Usan Supertest sobre la app exportada en `app.ts` (sin abrir un puerto real):
 6. Fecha mal formada → 400 con `INVALID_DATE`.
 7. `from` posterior a `to` → 400 con `INVALID_RANGE`.
 8. Ruta inexistente → 404 con `NOT_FOUND`.
+9. Las respuestas no incluyen la cabecera `X-Powered-By` (sección 6.7).
 
 ### 9.3 Scripts de `package.json`
 
@@ -263,7 +268,7 @@ docker ps   # la columna STATUS muestra (healthy) tras ~30 s
 La Fase 1 está completa cuando:
 
 - [ ] `npm run typecheck` termina sin errores.
-- [ ] `npm test` pasa las 13 pruebas descritas en la sección 9.
+- [ ] `npm test` pasa las 14 pruebas descritas en la sección 9 (5 unitarias + 9 de integración).
 - [ ] `npm run dev` responde en `http://localhost:3000` los 5 endpoints.
 - [ ] `docker build` genera la imagen y `docker images` reporta un tamaño menor a 250 MB.
 - [ ] El contenedor corre como usuario `node` (`docker exec kpi-api whoami` devuelve `node`).
